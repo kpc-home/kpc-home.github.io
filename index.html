@@ -191,21 +191,25 @@
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
-		<!-- Nav tabs -->
-			<ul class="nav nav-tabs">
+			<ul class="nav nav-tabs" id="myTab">
   				<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
   				<li><a href="#profile" data-toggle="tab">Profile</a></li>
   				<li><a href="#messages" data-toggle="tab">Messages</a></li>
   				<li><a href="#settings" data-toggle="tab">Settings</a></li>
 			</ul>
 
-		<!-- Tab panes -->
-			<div class="tab-content" style=color: white>
-  				<div class="tab-pane fade in active" id="home">qwertyuiop</div></div>
-  				<div class="tab-pane fade" id="profile">...</div>
-  				<div class="tab-pane fade" id="messages">...</div>
-  				<div class="tab-pane fade" id="settings">...</div>
+			<div class="tab-content">
+  				<div class="tab-pane active" id="home">...</div>
+  				<div class="tab-pane" id="profile">...</div>
+  				<div class="tab-pane" id="messages">...</div>
+  				<div class="tab-pane" id="settings">...</div>
 			</div>
+
+			<script>
+  				$(function () {
+    					$('#myTab a:last').tab('show')
+  				})
+			</script>
 		</div>
 	</div>
 	<div class="section" id="section3">
