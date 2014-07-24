@@ -9,30 +9,24 @@
 	<meta name="keywords"  content="" />
 	<meta name="Resource-type" content="Document" />
 	
-	
 	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<!--<link href="./css/bootstrap-theme.min.css" rel="stylesheet">-->
-	
 	
 	<style>
 	body{
 		font-family: 'mplus-2c-light';
 	}
-	
-
 	.section{
 		text-align: center;
 	}
-	
-	
 	@font-face
 	{
 		font-family: 'mplus-2c-light';
-    			src: url("./fonts/mplus-2c-light.eot"); /* IE9 Compat Modes */
-    			src: url("./fonts/mplus-2c-light.eot?#iefix") format('embedded-opentype'); /* IE6-IE8 */
-			src: url("./fonts/mplus-2c-light.woff") format('woff'); /* Modern Browsers */
-			src: url("./fonts/mplus-2c-light.ttf")  format('truetype'); /* Safari, Android, iOS */
+    			src: url("./fonts/mplus-2c-light.eot");
+    			src: url("./fonts/mplus-2c-light.eot?#iefix") format('embedded-opentype');
+			src: url("./fonts/mplus-2c-light.woff") format('woff');
+			src: url("./fonts/mplus-2c-light.ttf")  format('truetype');
 	}
 	@font-face
 	{		
@@ -44,15 +38,13 @@
 	}
 	</style>
 	
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	<script src="./js/1.8.3/jquery.min.js"></script>
+	<script src="./js/1.9.1/jquery-ui.min.js"></script>
+	<!--<script src="./js/1.11.0/jquery.min.js"></script>-->
 	<script type="text/javascript" src="./js/jquery.fullPage.min.js"></script>
-	<!--<script type="text/javascript" src="./js/jquery.slimscroll.min.js"></script>-->
-    	<script src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.slimscroll.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
@@ -60,14 +52,11 @@
 				//autoScrolling: false,
 			});
 		});
-		
 		$('#myTab a').click(function (e) {
   			e.preventDefault()
   			$(this).tab('show')
 		})
-		
 		$('#myTab a:first').tab('show') // Select first tab
-		
 		$(function () {
 			$('#myTab a:last').tab('show')
   		})
@@ -116,7 +105,7 @@
             </li>
             <li data-menuanchor="5thPage"><a href="#5thPage">Links</a></li>
           </ul>
-        </div><!--/.nav-collapse--> 
+        </div>
       </div>
     </div>
 </header>
@@ -124,20 +113,24 @@
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="intro">
-		　<h1>
-			<div class="jumbotron">
-		　	ようこそ
-			</div>	
-		　</h1>
+			<div class="page-header">
+  					<h1>ようこそ <small>Subtext for header</small></h1>
+				</div>
 			<div class="alert alert-info"><strong>Under Construction</strong>- このページは工事中です -</div>
-      		</div>
+      	</div>
 	</div>
 	<div class="section" id="section1">
 		<div class="intro">
+			<div class="page-header">
+  					<h1>情報 <small>Subtext for header</small></h1>
+				</div>
 		</div>
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
+			<div class="page-header">
+  					<h1>活動 <small>Subtext for header</small></h1>
+				</div>
 		   <div class="row">
   			　<div class="col-sm-6 col-md-4">
     			　　<div class="thumbnail">
@@ -172,9 +165,15 @@
 	</div>
 	<div class="section" id="section3">
 		<div class="intro">
-			<div class="slide" id="slide0" data-anchor="slide0"><h1>班活動</h1></div>
+			<div class="slide" id="slide0" data-anchor="slide0">
+				<div class="page-header">
+  					<h1>班活動 <small>Subtext for header</small></h1>
+				</div>
+			</div>
 			<div class="slide" id="slide1" data-anchor="slide1">
-				<h1>ソフトウェア班</h1>
+				<div class="page-header">
+  					<h1>ソフトウェア班 <small>Subtext for header</small></h1>
+				</div>
 				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
@@ -187,40 +186,55 @@
       							<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab" data-width="800" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
       						</div>
       						<div class="modal-footer">
-      						</div>
+     						</div>
       					</div>
       				</div>			
-				</div>	
-	    	</div>	
-	    	<div class="slide" id="slide2" data-anchor="slide2"><h1>ロボット班</h1></div>
-			<div class="slide" id="slide3" data-anchor="slide3"><h1>マイコン班</h1></div>
-			<div class="slide" id="slide4" data-anchor="slide4"><h1>電子工作班</h1></div>
-			<div class="slide" id="slide5" data-anchor="slide5"><h1>ピタゴラ班</h1></div>
+				</div>
+			</div>	
+	    	<div class="slide" id="slide2" data-anchor="slide2">
+	    		<div class="page-header">
+  					<h1>ロボット班 <small>Subtext for header</small></h1>
+				</div>
+			</div>
+			<div class="slide" id="slide3" data-anchor="slide3">
+				<div class="page-header">
+  					<h1>マイコン班 <small>Subtext for header</small></h1>
+				</div>
+			</div>
+			<div class="slide" id="slide4" data-anchor="slide4">
+				<div class="page-header">
+  					<h1>電子工作班 <small>Subtext for header</small></h1>
+				</div>
+			</div>
+			<div class="slide" id="slide5" data-anchor="slide5">
+				<div class="page-header">
+  					<h1>ピタゴラ班 <small>Subtext for header</small></h1>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="section" id="section4">
 		<div class="intro">
-			<h1>
-				リンク
-			</h1>
+			<div class="page-header">
+  				<h1>リンク <small>Subtext for header</small></h1>
+			</div>
 			<div class="row">
       				<div class="col-sm-4">
-      					<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab?ref_type=bookmark" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true">Facebook</div>
+      					<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true">Facebook</div>
       				</div>
       				<div class="col-sm-4">
       					<a href="http://www.kaijo.ed.jp/" target="_blank">
       						<span class="glyphicon glyphicon-new-window"></span>海城中学校・高等学校ホームページ
       					</a>
       				</div>
+      				<div class="tumbnail">
       				<div class="col-sm-4 hidden-xs">
-      					<div class="thumbnail">
       			　　　		 <img src="./images/QRCode.png" alt="QRCode">
       			　　　		 <div class="caption">
-	        	　　　　	  <h3>Thumbnail label</h3>
-        		　　　　	  <p>...</p>
-        		　　　　	  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	        	　　　　	  <h3><span class="glyphicon glyphicon-qrcode"></span>このページのQRコード</h3>
+        		　　　　	  <p>このページは、スマートフォンでも閲覧可能です。</p>
       			　　　		 </div>
-    			　　		</div>
+      				</div>
       				</div>
     			</div>
 		</div>
