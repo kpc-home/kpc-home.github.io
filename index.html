@@ -47,7 +47,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+				anchors: ['home', 'information', 'groupes', 'links'],
 				menu: '#menu',
 				//autoScrolling: false,
 			});
@@ -58,7 +58,7 @@
 		})
 		$('#myTab a:first').tab('show') // Select first tab
 		$(function () {
-			$('#myTab a:last').tab('show')
+			$('#myTab a:first').tab('show')
   		})
 	</script>
 </head>
@@ -84,26 +84,25 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style=font-size:25px; href="#1stPage">Kaijo Physics Club</a>
+          <a class="navbar-brand" href="#home">Kaijo Physics Club</a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav" id="menu" style=font-size:20px;>
-            <li data-menuanchor="1stPage"><a href="#1stPage" data-toggle="tooltip" data-placement="bottom" title="Tooltip on left">Home</a></li>
-	    <li data-menuanchor="2ndPage"><a href="#2ndPage">Information</a></li>
-	    <li data-menuanchor="3rdPage"><a href="#3rdPage">Activities</a></li>
-	    <li class="dropdown" data-menuanchor="4thPage">
-              <a href="#4thPage" class="dropdown-toggle" data-toggle="dropdown">Groupes<b class="caret"></b></a>
+          <ul class="nav navbar-nav" id="menu">
+            <li data-menuanchor="home"><a href="#home" data-toggle="tooltip" data-placement="bottom" title="Tooltip on left">Home</a></li>
+	    	<li data-menuanchor="information"><a href="#information">Information</a></li>
+	    	<li class="dropdown" data-menuanchor="groupes">
+              <a href="#groupes" class="dropdown-toggle" data-toggle="dropdown">Groupes<b class="caret"></b></a>
               <ul class="dropdown-menu">
-              	<li><a href="#4thPage/slide0">班活動</a></li>
+              	<li><a href="#groupes/outline">活動概要</a></li>
               	<li class="divider"></li>
-                <li><a href="#4thPage/slide1">ソフトウェア班</a></li>
-                <li><a href="#4thPage/slide2">ロボット班</a></li>
-                <li><a href="#4thPage/slide3">マイコン班</a></li>
-                <li><a href="#4thPage/slide4">電子工作班</a></li>
-                <li><a href="#4thPage/slide5">ピタゴラ班</a></li>
+                <li><a href="#groupes/softwares">ソフトウェア班</a></li>
+                <li><a href="#groupes/robots">ロボット班</a></li>
+                <li><a href="#groupes/microcomputers">マイコン班</a></li>
+                <li><a href="#groupes/electronics">電子工作班</a></li>
+                <li><a href="#groupes/others">その他の活動</a></li>
               </ul>
             </li>
-            <li data-menuanchor="5thPage"><a href="#5thPage">Links</a></li>
+            <li data-menuanchor="links"><a href="#links">Links</a></li>
           </ul>
         </div>
       </div>
@@ -111,7 +110,7 @@
 </header>
 
 <div id="fullpage">
-	<div class="section " id="section0">
+	<div class="section " id="home">
 		<div class="intro">
 			<div class="page-header">
   					<h1>ようこそ <small>Subtext for header</small></h1>
@@ -119,32 +118,28 @@
 			<div class="alert alert-info"><strong>Under Construction</strong>- このページは工事中です -</div>
       	</div>
 	</div>
-	<div class="section" id="section1">
+	<div class="section" id="information">
 		<div class="intro">
 			<div class="page-header">
   					<h1>情報 <small>Subtext for header</small></h1>
-				</div>
+			</div>
+			<div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8781101687423!2d139.702425!3d35.70461699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d256d88354d%3A0xe781e52df68c70d8!2z5rW35Z-O5a2m5ZyS!5e0!3m2!1sja!2sjp!4v1406205761611" width="600" height="450" frameborder="0" style="border:0"></iframe>
+			</div>
 		</div>
 	</div>
-	<div class="section" id="section2">
+	<div class="section" id="outline">
 		<div class="intro">
-			<div class="page-header">
-  					<h1>活動 <small>Subtext for header</small></h1>
+			<div class="slide" id="outline" data-anchor="outline">
+				<div class="page-header">
+  					<h1>活動概要<small>Subtext for header</small></h1>
 				</div>
-		   <div class="row">
-  			　<div class="col-sm-6 col-md-4">
-    			　　<div class="thumbnail">
-      			　　　<img data-src="holder.js/300x300" alt="...">
-      			　　　<div class="caption">
-	        	　　　　<h3>Thumbnail label</h3>
-        		　　　　<p>...</p>
-        		　　　　<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      			　　　</div>
-    			　　</div>
-  			　</div>
-      		　　</div> 
-		
-		<div class="panel panel-default">
+			</div>
+			<div class="slide" id="softwares" data-anchor="softwares">
+				<div class="page-header">
+  					<h1>ソフトウェア班 <small>Subtext for header</small></h1>
+				</div>
+				<div class="panel panel-default">
   		<div class="panel-body">
 			<ul class="nav nav-tabs" id="myTab">
   				<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
@@ -161,20 +156,13 @@
 			</div>
 		</div>
 		</div>
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<div class="slide" id="slide0" data-anchor="slide0">
-				<div class="page-header">
-  					<h1>班活動 <small>Subtext for header</small></h1>
+
+			</div>	
+	    	<div class="slide" id="robots" data-anchor="robots">
+	    		<div class="page-header">
+  					<h1>ロボット班 <small>Subtext for header</small></h1>
 				</div>
-			</div>
-			<div class="slide" id="slide1" data-anchor="slide1">
-				<div class="page-header">
-  					<h1>ソフトウェア班 <small>Subtext for header</small></h1>
-				</div>
-				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+								<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
@@ -190,30 +178,25 @@
       					</div>
       				</div>			
 				</div>
-			</div>	
-	    	<div class="slide" id="slide2" data-anchor="slide2">
-	    		<div class="page-header">
-  					<h1>ロボット班 <small>Subtext for header</small></h1>
-				</div>
 			</div>
-			<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="slide" id="microcomputers" data-anchor="microcomputers">
 				<div class="page-header">
   					<h1>マイコン班 <small>Subtext for header</small></h1>
 				</div>
 			</div>
-			<div class="slide" id="slide4" data-anchor="slide4">
+			<div class="slide" id="electronics" data-anchor="electronics">
 				<div class="page-header">
   					<h1>電子工作班 <small>Subtext for header</small></h1>
 				</div>
 			</div>
-			<div class="slide" id="slide5" data-anchor="slide5">
+			<div class="slide" id="others" data-anchor="others">
 				<div class="page-header">
-  					<h1>ピタゴラ班 <small>Subtext for header</small></h1>
+  					<h1>その他の活動 <small>Subtext for header</small></h1>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section4">
+	<div class="section" id="links">
 		<div class="intro">
 			<div class="page-header">
   				<h1>リンク <small>Subtext for header</small></h1>
