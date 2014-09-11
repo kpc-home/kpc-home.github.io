@@ -16,6 +16,8 @@
 	<style>
 	body{
 		font-family: 'mplus-2c-light';
+		font-size: 18px;
+		
 	}
 	.section{
 		text-align: center;
@@ -47,22 +49,22 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['home', 'information', 'groupes', 'links'],
+				anchors: ['firstPage', 'secondPage', 'groupes', 'gallery', 'links'],
 				menu: '#menu',
 				//autoScrolling: false,
 			});
 		});
-		$('#myTab a').click(function (e) {
+		/*$('#myTab a').click(function (e) {
   			e.preventDefault()
   			$(this).tab('show')
 		})
 		$('#myTab a:first').tab('show') // Select first tab
 		$(function () {
 			$('#myTab a:first').tab('show')
-  		})
+  		})*/
 	</script>
 </head>
-<body>
+<body  style="background-image: './images/1.JPG'">
 <div id="fb-root"></div>
 <script>
 	(function(d, s, id) {
@@ -75,7 +77,7 @@
 </script>
 
 <header id="header">
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" tyle="font-size: 25px">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -84,14 +86,14 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#home">Kaijo Physics Club</a>
+          <a class="navbar-brand" type="text/css" media="screen" href="firstPage">Kaijo Physics Club</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav" id="menu">
-            <li data-menuanchor="home"><a href="#home" data-toggle="tooltip" data-placement="bottom" title="Tooltip on left">Home</a></li>
-	    	<li data-menuanchor="information"><a href="#information">Information</a></li>
+            <li data-menuanchor="firstPage"><a href="#firstPage" data-toggle="tooltip" data-placement="bottom" title="Tooltip on left">Home</a></li>
+	    	<li data-menuanchor="secondPage"><a href="#secondPage">物理部とは</a></li>
 	    	<li class="dropdown" data-menuanchor="groupes">
-              <a href="#groupes" class="dropdown-toggle" data-toggle="dropdown">Groupes<b class="caret"></b></a>
+              <a href="#groupes" class="dropdown-toggle" data-toggle="dropdown">活動概要<b class="caret"></b></a>
               <ul class="dropdown-menu">
               	<li><a href="#groupes/outline">活動概要</a></li>
               	<li class="divider"></li>
@@ -102,7 +104,8 @@
                 <li><a href="#groupes/others">その他の活動</a></li>
               </ul>
             </li>
-            <li data-menuanchor="links"><a href="#links">Links</a></li>
+            <li data-menuanchor="gallery"><a href="#gallery">ギャラリー</a></li>
+            <li data-menuanchor="links"><a href="#links">リンク</a></li>
           </ul>
         </div>
       </div>
@@ -110,40 +113,139 @@
 </header>
 
 <div id="fullpage">
-	<div class="section " id="home">
+	<div class="section " id="section0">
 		<div class="intro">
 			<div class="page-header">
-  					<h1>ようこそ <small>Subtext for header</small></h1>
+  					<h1>ようこそ <p></p><small>Subtext for header</small></h1>
 				</div>
-			<div class="alert alert-info"><strong>Under Construction</strong>- このページは工事中です -</div>
-      	</div>
-	</div>
-	<div class="section" id="information">
-		<div class="intro">
-			<div class="page-header">
-  					<h1>情報 <small>Subtext for header</small></h1>
-			</div>
+				<!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  					
+  					<ol class="carousel-indicators">
+    					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  					</ol>
+
+  					
+  					<div class="carousel-inner">
+    					<div class="item active">
+      						<img src="..." alt="...">
+      							<div class="carousel-caption">
+      							  ...
+      							</div>
+    					</div>
+    					<div class="item">
+      						<img src="..." alt="...">
+      							<div class="carousel-caption">
+      							  ...
+      							</div>
+    						</div>
+  							  ...
+  						</div>
+
+  					
+  					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  						  <span class="glyphicon glyphicon-chevron-left"></span>
+  					</a>
+  					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    					<span class="glyphicon glyphicon-chevron-right"></span>
+  					</a>
+			</div>-->
 			<div>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8781101687423!2d139.702425!3d35.70461699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d256d88354d%3A0xe781e52df68c70d8!2z5rW35Z-O5a2m5ZyS!5e0!3m2!1sja!2sjp!4v1406205761611" width="600" height="450" frameborder="0" style="border:0"></iframe>
+				<h4>
+					物理部は、「好きな研究を好きなように好きなだけ」の標語の下、
+					<p></p>
+					機械工学から自然科学まで、物理関係のものなら何でも研究できる自由な部活です。
+				</h4>
 			</div>
 		</div>
 	</div>
-	<div class="section" id="outline">
+	<div class="section" id="section1">
 		<div class="intro">
-			<div class="slide" id="outline" data-anchor="outline">
-				<div class="page-header">
-  					<h1>活動概要<small>Subtext for header</small></h1>
+			<div class="page-header">
+  					<h1>物理部とは<p></p><small>Subtext for header</small></h1>
+			</div>
+			<div class="row">
+      			<div class="col-sm-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8781101687423!2d139.702425!3d35.70461699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d256d88354d%3A0xe781e52df68c70d8!2z5rW35Z-O5a2m5ZyS!5e0!3m2!1sja!2sjp!4v1406205761611" width="400" height="300" frameborder="0" style="border:0"></iframe>
+				</div>
+				<div clas="col-sm-6">
+						
 				</div>
 			</div>
-			<div class="slide" id="softwares" data-anchor="softwares">
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<div class="slide" data-anchor="outline">
 				<div class="page-header">
-  					<h1>ソフトウェア班 <small>Subtext for header</small></h1>
+  					<h1>活動概要 <p></p><small>Subtext for header</small></h1>
 				</div>
+				<div class="row">
+					<div
+					<dl class="dl-horizontal">
+						<dt>
+							部会
+						</dt>
+						<dd>
+							1週間に1回、物理実験室で文化祭の活動内容などを話し合っています。
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>
+							電子工作勉強会
+						</dt>
+						<dd>
+							伝説の部長（物理部にくれば分かります）により行われ、ラジオなどを作っていきます。
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>
+							秋葉原ツアー
+						</dt>
+						<dd>
+							電子部品の店をまわり、パーツやキットなどの買出しを行います。
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>
+							オシロスコープ説明会
+						</dt>
+						<dd>
+							オシロスコープについて部長から説明があります。
+						</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>
+							文化祭
+						</dt>
+						<dd>
+							今までに作った作品を展示、発表します。
+						</dd>
+					</dl>
+				</div>
+				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/others">&laquo;</a></li>
+					<li class="active"><a href="#groupes/outline">1</a></li>
+					<li><a href="#groupes/softwares">2</a></li>
+					<li><a href="#groupes/robots">3</a></li>
+					<li><a href="#groupes/microcomputers">4</a></li>
+					<li><a href="#groupes/electronics">5</a></li>
+					<li><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/others">&raquo;</a></li>
+				</ul>
+			</div>
+			<div class="slide" data-anchor="softwares">
+				<div class="page-header">
+  					<h1>ソフトウェア班 <p></p><small>Subtext for header</small></h1>
+				</div>
+				
 				<div class="panel panel-default">
-  		<div class="panel-body">
+  			<div class="panel-body">
 			<ul class="nav nav-tabs" id="myTab">
-  				<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-  				<li><a href="#profile" data-toggle="tab">Profile</a></li>
+  				<li class="active"><a href="#" data-toggle="tab">3Dプリンター</a></li>
+  				<li><a href="#profile" data-toggle="tab">アプリ開発</a></li>
   				<li><a href="#messages" data-toggle="tab">Messages</a></li>
   				<li><a href="#settings" data-toggle="tab">Settings</a></li>
 			</ul>
@@ -154,67 +256,149 @@
   				<div class="tab-pane fade" id="settings">
   				</div>
 			</div>
+			</div>
+				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/outline">&laquo;</a></li>
+					<li><a href="#groupes/outline">1</a></li>
+					<li class="active"><a href="#groupes/softwares">2</a></li>
+					<li><a href="#groupes/robots">3</a></li>
+					<li><a href="#groupes/microcomputers">4</a></li>
+					<li><a href="#groupes/electronics">5</a></li>
+					<li><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/others">&raquo;</a></li>
+				</ul>
 		</div>
-		</div>
-
-			</div>	
 	    	<div class="slide" id="robots" data-anchor="robots">
 	    		<div class="page-header">
-  					<h1>ロボット班 <small>Subtext for header</small></h1>
+  					<h1>ロボット班 <p></p><small>Subtext for header</small></h1>
 				</div>
-								<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-      						<div class="modal-header">
-      							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        						<h4 class="modal-title" id="myModalLabel">ソフトウェア班の活動</h4>
-      						</div>
-      						<div class="modal-body">
-      							<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab" data-width="800" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
-      						</div>
-      						<div class="modal-footer">
-     						</div>
-      					</div>
-      				</div>			
-				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/outline">&laquo;</a></li>
+					<li><a href="#groupes/outline">1</a></li>
+					<li><a href="#groupes/softwares">2</a></li>
+					<li class="active"><a href="#groupes/robots">3</a></li>
+					<li><a href="#groupes/microcomputers">4</a></li>
+					<li><a href="#groupes/electronics">5</a></li>
+					<li><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/others">&raquo;</a></li>
+				</ul>
 			</div>
 			<div class="slide" id="microcomputers" data-anchor="microcomputers">
 				<div class="page-header">
-  					<h1>マイコン班 <small>Subtext for header</small></h1>
+  					<h1>マイコン班 <p></p><small>Subtext for header</small></h1>
 				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/outline">&laquo;</a></li>
+					<li><a href="#groupes/outline">1</a></li>
+					<li><a href="#groupes/softwares">2</a></li>
+					<li><a href="#groupes/robots">3</a></li>
+					<li class="active"><a href="#groupes/microcomputers">4</a></li>
+					<li><a href="#groupes/electronics">5</a></li>
+					<li><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/others">&raquo;</a></li>
+				</ul>
 			</div>
 			<div class="slide" id="electronics" data-anchor="electronics">
 				<div class="page-header">
-  					<h1>電子工作班 <small>Subtext for header</small></h1>
+  					<h1>電子工作班 <p></p><small>Subtext for header</small></h1>
 				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/outline">&laquo;</a></li>
+					<li><a href="#groupes/outline">1</a></li>
+					<li><a href="#groupes/softwares">2</a></li>
+					<li><a href="#groupes/robots">3</a></li>
+					<li><a href="#groupes/microcomputers">4</a></li>
+					<li class="active"><a href="#groupes/electronics">5</a></li>
+					<li><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/others">&raquo;</a></li>
+				</ul>
 			</div>
 			<div class="slide" id="others" data-anchor="others">
 				<div class="page-header">
-  					<h1>その他の活動 <small>Subtext for header</small></h1>
+  					<h1>その他の活動 <p></p><small>Subtext for header</small></h1>
 				</div>
+				<ul class="pagination">
+					<li><a href="#groupes/outline">&laquo;</a></li>
+					<li><a href="#groupes/outline">1</a></li>
+					<li><a href="#groupes/softwares">2</a></li>
+					<li><a href="#groupes/robots">3</a></li>
+					<li><a href="#groupes/microcomputers">4</a></li>
+					<li><a href="#groupes/electronics">5</a></li>
+					<li class="active"><a href="#groupes/others">6</a></li>
+					<li><a href="#groupes/outline">&raquo;</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="section" id="links">
+	<div class="section" id="section3">
 		<div class="intro">
 			<div class="page-header">
-  				<h1>リンク <small>Subtext for header</small></h1>
+  				<h1>ギャラリー <p></p><small>Subtext for header</small></h1>
+			</div>
+			<div class="row">
+  				<div class="col-xs-6 col-md-3">
+    				<a href="#" class="thumbnail">
+      					<img data-src="holder.js/100%x180" alt="...">
+    				</a>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<div class="page-header">
+  				<h1>リンク <p></p><small>Subtext for header</small></h1>
 			</div>
 			<div class="row">
       				<div class="col-sm-4">
-      					<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true">Facebook</div>
+      					<p>お問い合わせ・物理部の近況はこちら</p>
+      					<div class="fb-like-box" data-href="https://www.facebook.com/KaijoPhysicsLab" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
       				</div>
-      				<div class="col-sm-4">
-      					<a href="http://www.kaijo.ed.jp/" target="_blank">
-      						<span class="glyphicon glyphicon-new-window"></span>海城中学校・高等学校ホームページ
-      					</a>
+      				<div class="col-sm-4 hidden-xs">
+      					<ul style="text-align: left">
+      						<li>
+      							<a href="http://www.kaijo.ed.jp/" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城中学校・高等学校ホームページ
+      							</a>
+      						</li>
+      						<li>
+      							<a href="http://www.unabarakai.jp/index.php" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城学園同窓会 海原会
+      							</a>
+      						</li>
+      						<li>
+      							<a href="http://www.kaijo-kouenkai.jp/" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城中学・高等学校後援会
+      							</a>
+      						</li>
+							<li>
+      							<a href="http://www.kaijofes.com/" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城祭公式ホームページ
+      							</a>
+      						</li>
+      						<li>
+      							<a href="https://www.facebook.com/kaijostudents" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城高校生徒会Facebookページ
+      							</a>
+      						</li>
+      						<li>
+      							<a href="http://www.kaijo-pta.com/" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城学園 海城中学高等学校 PTA
+      							</a>
+      						</li>
+      						<li>
+      							<a href="https://www.facebook.com/kaijofes" target="_blank">
+      								<span class="glyphicon glyphicon-new-window"></span> 海城祭Facebookページ
+      							</a>
+      						</li>
+      					</ul>
       				</div>
       				<div class="tumbnail">
-      				<div class="col-sm-4 hidden-xs">
+      				<div class="col-sm-4 hidden-s hidden-xs">
       			　　　		 <img src="./images/QRCode.png" alt="QRCode">
       			　　　		 <div class="caption">
-	        	　　　　	  <h3><span class="glyphicon glyphicon-qrcode"></span>このページのQRコード</h3>
+	        	　　　　	  <h3><span class="glyphicon glyphicon-qrcode"></span> このページのQRコード</h3>
         		　　　　	  <p>このページは、スマートフォンでも閲覧可能です。</p>
       			　　　		 </div>
       				</div>
